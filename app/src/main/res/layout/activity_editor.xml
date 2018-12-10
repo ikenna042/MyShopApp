@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".EditorActivity">
+
+    <!-- Layout for Overview category-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Label-->
+        <TextView
+            android:text="@string/category_overview"
+            style="@style/CategoryStyle"/>
+
+        <!-- Input fields-->
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:paddingLeft="4dp"
+            android:orientation="vertical">
+
+            <!-- Name field-->
+            <EditText
+                android:id="@+id/edit_product_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/EditorFieldStyle"
+                android:hint="@string/hint_product_name"/>
+            <!-- Brand field-->
+            <EditText
+                android:id="@+id/edit_product_brand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/EditorFieldStyle"
+                android:hint="@string/hint_product_brand"/>
+            <!-- Supplier field-->
+            <EditText
+                android:id="@+id/edit_product_supplier"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/EditorFieldStyle"
+                android:hint="@string/hint_product_supplier"/>
+            <!-- Quantity field-->
+            <EditText
+                android:id="@+id/edit_product_quantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                style="@style/EditorFieldStyle"
+                android:hint="@string/hint_product_quantity"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Layout for the amount category-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Label-->
+        <TextView
+            android:text="@string/category_amount"
+            style="@style/CategoryStyle"/>
+
+        <!-- Input fields-->
+        <RelativeLayout
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:paddingLeft="4dp">
+
+            <!-- Price field-->
+            <EditText
+                android:id="@+id/edit_product_price"
+                android:inputType="number"
+                style="@style/EditorFieldStyle"
+                android:hint="@string/hint_product_price"/>
+
+            <!-- Currency Field-->
+            <EditText
+                android:id="@+id/edit_currency"
+                android:text="@string/currency_per_price"
+                style="@style/EditorCurrencyStyle"/>
+
+    </RelativeLayout>
+
+    </LinearLayout>
+
+    <!-- Photo Category-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--Label-->
+        <TextView
+            android:text="@string/category_photo"
+            style="@style/CategoryStyle"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+            <!-- Input Image Field-->
+        <ImageView
+            android:id="@+id/edit_image_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/add_photo"
+            />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

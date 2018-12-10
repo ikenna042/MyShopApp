@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">My Shop App</string>
+
+    <string name="empty_view_title_text">"There are no products here..."</string>
+    <string name="empty_view_subtitle_text">"Add a new product"</string>
+    <string name="category_overview">Overview</string>
+    <string name="category_amount">Amount</string>
+    <string name="category_quality">Quality</string>
+    <string name="hint_product_name">Name</string>
+    <string name="hint_product_brand">Brand</string>
+    <string name="hint_product_supplier">Supplier</string>
+    <string name="hint_product_quantity">Quantity available</string>
+    <string name="hint_product_price">Price</string>
+    <string name="currency_per_price">NGN</string>
+    <string name="category_photo">Add Photo</string>
+    <string name="action_insert_dummy_data">Insert Dummy Data</string>
+    <string name="action_delete_all_entries">Delete All Products</string>
+    <string name="action_save">Save</string>
+    <string name="action_delete">Delete</string>
+    <string name="label_add_product">Add New Product</string>
+    <string name="label_edit_product">Edit Product</string>
+</resources>
