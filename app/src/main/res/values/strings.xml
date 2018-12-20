@@ -19,4 +19,17 @@
     <string name="action_delete">Delete</string>
     <string name="label_add_product">Add New Product</string>
     <string name="label_edit_product">Edit Product</string>
+    <string name="sale_button_clicked"> Sale button clicked</string>
+    <string name="editor_insert_product_failed">Product insert failed</string>
+    <string name="editor_insert_product_successful">Product added</string>
+    <string name="editor_update_failed">Update failed</string>
+    <string name="editor_update_successful">Update successful</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete_dialog_message">Delete this Product?</string>
+    <string name="editor_delete_product_failed">Delete failed</string>
+    <string name="editor_delete_product_successful">Delete successful</string>
+    <string name="unsaved_changes_dialog_msg">Discard your changes and quit editing?</string>
+    <string name="discard">Discard</string>
+    <string name="keep_editing">Keep Editing</string>
 </resources>

@@ -19,7 +19,6 @@
         <activity
             android:name=".EditorActivity"
             android:theme="@style/EditorTheme"
-            android:label="@string/label_add_product"
             android:parentActivityName=".MainActivity">
             <!-- Parent activity meta-data to support 4.0 and lower-->
             <meta-data
