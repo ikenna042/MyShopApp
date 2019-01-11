@@ -14,4 +14,6 @@
 
     <!-- Primary dark color for the editor -->
     <color name="editorColorPrimaryDark">#394450</color>
+    <!-- Colour when button is inactive -->
+    <color name="disableButtonColor">#F58682</color>
 </resources>

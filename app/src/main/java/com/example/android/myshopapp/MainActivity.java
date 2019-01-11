@@ -18,6 +18,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.android.myshopapp.data.ProductContract;
 import com.example.android.myshopapp.data.ProductDbHelper;
@@ -56,21 +57,30 @@ public class MainActivity extends AppCompatActivity implements
 
         productListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                Toast.makeText(MainActivity.this, R.string.order,
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
+
+       /* productListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
                 Intent intent = new Intent(MainActivity.this, EditorActivity.class);
 
-                Uri currenProductUri = ContentUris.withAppendedId(
+                Uri currentProductUri = ContentUris.withAppendedId(
                         ProductContract.ProductEntry.CONTENT_URI, id);
-                intent.setData(currenProductUri);
+                intent.setData(currentProductUri);
                 startActivity(intent);
             }
-        });
+        });*/
 
         getLoaderManager().initLoader(PRODUCT_LOADER, null, this);
     }
 
     /**
-     * Helper method to insert hardcoded product data into the database. For debugging purposes only.
+     *Helper method to insert hardcoded product data into the database. For debugging purposes only.
      */
     private void insertProduct() {
 

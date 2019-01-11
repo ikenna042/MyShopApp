@@ -18,6 +18,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -39,6 +40,8 @@ public class EditorActivity extends AppCompatActivity implements
     private EditText mQuantityEditText;
     private EditText mPriceEditText;
 
+    private Button mOrderButton;
+
     /** Boolean flag that keeps track of whether the product has been edited (true) or not(false) */
     private boolean mProductHasChanged = false;
 
@@ -55,8 +58,8 @@ public class EditorActivity extends AppCompatActivity implements
     };
 
     @Override
-    protected void onCreate(Bundle savedIntanceState) {
-        super.onCreate(savedIntanceState);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_editor);
 
         Intent intent = getIntent();
@@ -64,9 +67,11 @@ public class EditorActivity extends AppCompatActivity implements
 
         if (mCurrentProductUri == null) {
             setTitle(getString(R.string.label_add_product));
+            mOrderButton = findViewById(R.id.button_order);
             invalidateOptionsMenu();
         } else {
             setTitle(getString(R.string.label_edit_product));
+            mOrderButton.setCursorVisible(false);
             getLoaderManager().initLoader(EXISTING_PRODUCT_LOADER, null, this);
         }
 
@@ -81,6 +86,14 @@ public class EditorActivity extends AppCompatActivity implements
         mSupplierEditText.setOnTouchListener(mTouchListener);
         mQuantityEditText.setOnTouchListener(mTouchListener);
         mPriceEditText.setOnTouchListener(mTouchListener);
+
+        mOrderButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(EditorActivity.this, getString(R.string.order),
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     private void saveProduct() {
@@ -104,13 +117,13 @@ public class EditorActivity extends AppCompatActivity implements
         values.put(ProductContract.ProductEntry.COLUMN_PRODUCT_SUPPLIER, supplierString);
 
         int quantity = 0;
-        if (TextUtils.isEmpty(quantityString)) {
+        if (!TextUtils.isEmpty(quantityString)) {
             quantity = Integer.parseInt(quantityString);
         }
         values.put(ProductContract.ProductEntry.COLUMN_PRODUCT_QUANTITY, quantity);
 
         int price = 0;
-        if(TextUtils.isEmpty(priceString)) {
+        if(!TextUtils.isEmpty(priceString)) {
             price = Integer.parseInt(priceString);
         }
         values.put(ProductContract.ProductEntry.COLUMN_PRODUCT_PRICE, price);

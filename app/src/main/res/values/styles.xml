@@ -44,6 +44,14 @@
         <item name="android:textAppearance">?android:textAppearanceSmall</item>
     </style>
 
+    <!-- Style
+    android:textColor="#FFFFFF"
+            android:background="@color/colorPrimary"
+    for the buttons -->
+    <style name="ButtonStyle">
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:textColor">#FFFFFF</item>
 
+    </style>
 
 </resources>

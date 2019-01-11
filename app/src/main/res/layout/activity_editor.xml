@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+<LinearLayout
+
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -48,14 +52,7 @@
                 android:layout_height="wrap_content"
                 style="@style/EditorFieldStyle"
                 android:hint="@string/hint_product_supplier"/>
-            <!-- Quantity field-->
-            <EditText
-                android:id="@+id/edit_product_quantity"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                style="@style/EditorFieldStyle"
-                android:hint="@string/hint_product_quantity"/>
+
 
         </LinearLayout>
 
@@ -91,18 +88,27 @@
                 android:id="@+id/edit_currency"
                 android:text="@string/currency_per_price"
                 style="@style/EditorCurrencyStyle"/>
+            <!-- Quantity field-->
+            <EditText
+                android:id="@+id/edit_product_quantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:layout_below="@id/edit_currency"
+                style="@style/EditorFieldStyle"
+                android:hint="@string/hint_product_quantity"/>
 
     </RelativeLayout>
 
     </LinearLayout>
 
     <!-- Photo Category-->
-    <LinearLayout
+    <!--<LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <!--Label-->
+        &lt;!&ndash;Label&ndash;&gt;
         <TextView
             android:text="@string/category_photo"
             style="@style/CategoryStyle"/>
@@ -113,7 +119,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="16dp">
-            <!-- Input Image Field-->
+            &lt;!&ndash; Input Image Field&ndash;&gt;
         <ImageView
             android:id="@+id/edit_image_view"
             android:layout_width="wrap_content"
@@ -123,6 +129,17 @@
 
         </LinearLayout>
 
-    </LinearLayout>
-
+    </LinearLayout>-->
 </LinearLayout>
+    <Button
+        android:id="@+id/button_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="@dimen/activity_margin"
+        android:text="order"
+        style="@style/ButtonStyle"/>
+
+
+</RelativeLayout>
